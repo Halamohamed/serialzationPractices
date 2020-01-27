@@ -1,5 +1,7 @@
 package ec.utbildning.hala.data;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -7,6 +9,7 @@ import java.util.UUID;
 
 public class Owner implements Serializable {
     private UUID ownerId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private String name;
     private LocalDate birthDate;
 
